@@ -1,5 +1,5 @@
 @import '~@angular/material/theming';
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+// @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @include mat-core();
 
 $candy-app-primary: mat-palette($mat-indigo);
@@ -8,7 +8,8 @@ $candy-app-warn:    mat-palette($mat-red);
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 @include angular-material-theme($candy-app-theme);
 
-$color-1:#27B1C1;
+
+$color-1: #F44336;      
 $color-2:#FCFCFC;
 $color-3:#B1B1B2;
 $color-4:#DEE2E5;
@@ -61,12 +62,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-md-card {
-  max-width: 80%;
-  margin: 2em auto;
-  text-align: center;
-}
-
 md-toolbar-row {
   justify-content: space-between;
 }
@@ -102,9 +97,17 @@ html, body, material-app, md-sidenav-container, .my-content {
 .fill-space{
       flex:1 1 auto;
 }
-
 //end of clean up
 
+
+//hide selection
+.hide-selection{
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; 
+}
 
 //all toolbar
 md-toolbar.hd-main-toolbar md-toolbar-row, md-toolbar.hd-side-toolbar md-toolbar-row{
@@ -115,11 +118,19 @@ md-toolbar.hd-main-toolbar{
       padding:0;
       min-height: 50px;
       height:50px;
-      background-color: $color-2;
-      color:$color-3;
+      background-color: $color-1;
+      color:$color-2;
+      position: relative;
+      .hd-title{
+            font-size: 18px; 
+            line-height: 18;
+            vertical-align: middle;
+            cursor: default;
+      }
+
       .hd-menu{
             font-size: 12px;
-            border:thin solid $color-6;
+            //border:thin solid $color-6;
             padding:16px;
             cursor:pointer;
             line-height: 1;
@@ -155,19 +166,25 @@ md-toolbar.hd-page-toolbar{
       .hd-page-title{
             font-size: 16px;
       }
+      // position: absolute;
+      // top: 100;
+      // right: 0;
 }
 //end of toolbar
-
 
 //sidenav
 md-sidenav-container.hd-sidenav-container{
       background-color: $color-4;
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      height: calc(100vh - 50px);
 }
 
 md-sidenav.hd-sidenav{
       background-color: $color-5;
-      width: 200px;
       color:$color-4;
+      min-width: 190px;
       md-nav-list{
             padding-top: 0;
       }
@@ -376,4 +393,41 @@ hd-menu-panel{
       padding:10px 20px !important;
       margin:0 !important;
       border-top:thin solid $color-4;
+}
+
+.hd-profile-menu .mat-menu-content{
+      background-color:$color-5 !important;
+      padding:0;
+      button{
+            display: block !important;
+            text-align: left !important;
+            padding:0px 10px !important;
+            font-size:13px !important;
+            color:$color-3;
+            md-icon{
+                  font-size:15px !important;
+                  height: 18px !important;
+                  padding:0;
+                  margin:0;
+                  color:$color-3;
+            }
+      }
+      button:hover{
+            color:$color-1;
+            md-icon{
+                  color:$color-1;
+            }
+      }
+}
+
+.loading-container{
+    z-index: 10000;
+    background: rgba(0,0, 0, .12);
+    transition: z-index 0.2s step-end;
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

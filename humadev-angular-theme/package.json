@@ -1,22 +1,59 @@
 {
-  "name": "humadev-angular-theme",
-  "version": "0.1.1",
-  "license": "MIT",
-  "description": "simple theme to quick start angular 2+ project",
+  "_args": [
+    [
+      {
+        "raw": "humadev-angular-theme@^0.1.5",
+        "scope": null,
+        "escapedName": "humadev-angular-theme",
+        "name": "humadev-angular-theme",
+        "rawSpec": "^0.1.5",
+        "spec": ">=0.1.5 <0.2.0",
+        "type": "range"
+      },
+      "D:\\bhumiku\\dev\\asadana-master"
+    ]
+  ],
+  "_from": "humadev-angular-theme@>=0.1.5 <0.2.0",
+  "_id": "humadev-angular-theme@0.1.5",
+  "_inCache": true,
+  "_location": "/humadev-angular-theme",
+  "_nodeVersion": "7.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/humadev-angular-theme-0.1.5.tgz_1495100002527_0.9171786338556558"
+  },
+  "_npmUser": {
+    "name": "humaprathama",
+    "email": "humaprathama@gmail.com"
+  },
+  "_npmVersion": "4.1.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "humadev-angular-theme@^0.1.5",
+    "scope": null,
+    "escapedName": "humadev-angular-theme",
+    "name": "humadev-angular-theme",
+    "rawSpec": "^0.1.5",
+    "spec": ">=0.1.5 <0.2.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/humadev-angular-theme/-/humadev-angular-theme-0.1.5.tgz",
+  "_shasum": "f3787c08e4e6e0b47d627cc701c0d13082784b46",
+  "_shrinkwrap": null,
+  "_spec": "humadev-angular-theme@^0.1.5",
+  "_where": "D:\\bhumiku\\dev\\asadana-master",
   "author": {
     "name": "Huma Prathama",
     "email": "huma.elektro@gmail.com"
   },
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+  "bugs": {
+    "url": "https://github.com/humaprathama/humadev-angular-theme/issues"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
+  "description": "simple theme to quick start angular 2+ project",
   "devDependencies": {
     "@angular/cli": "1.0.1",
     "@angular/compiler-cli": "^4.1.0",
@@ -28,19 +65,44 @@
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.3"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "f3787c08e4e6e0b47d627cc701c0d13082784b46",
+    "tarball": "https://registry.npmjs.org/humadev-angular-theme/-/humadev-angular-theme-0.1.5.tgz"
+  },
+  "homepage": "https://github.com/humaprathama/humadev-angular-theme#readme",
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "humaprathama",
+      "email": "humaprathama@gmail.com"
+    }
+  ],
+  "name": "humadev-angular-theme",
+  "optionalDependencies": {},
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/humaprathama/humadev-angular-theme.git"
-  }
+  },
+  "scripts": {
+    "build": "ng build",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
+    "ng": "ng",
+    "start": "ng serve",
+    "test": "ng test"
+  },
+  "version": "0.1.5"
 }

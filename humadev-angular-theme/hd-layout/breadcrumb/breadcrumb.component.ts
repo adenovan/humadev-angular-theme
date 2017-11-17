@@ -14,7 +14,7 @@ interface IBreadcrumb {
             <ul class="hd-breadcrumb">
                   <li><a routerLink="">Home</a></li>
                   <li *ngFor="let breadcrumb of breadcrumbs">
-                        <a [routerLink]="[breadcrumb.url, breadcrumb.params]" *ngIf="breadcrumb.class == 'link'; else nonLink">{{breadcrumb.label}}</a>
+                        <span *ngIf="breadcrumb.class == 'link'; else nonLink">{{breadcrumb.label}}</span>
                         <ng-template #nonLink>
                               <span>{{breadcrumb.label}}</span>
                         </ng-template>
@@ -34,7 +34,7 @@ export class BreadcrumbComponent implements OnInit {
                   event => event instanceof NavigationEnd)
             .subscribe(event => {
                   //set breadcrumbs
-                  let root: ActivatedRoute = this.activatedRoute.root;
+                  let root: ActivatedRoute = this.activatedRoute;
                   this.breadcrumbs = this.getBreadcrumbs(root);
             });
             
